@@ -1,0 +1,12 @@
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+  instance:
+    lease-expiration-duration-in-seconds: 120
+    lease-renewal-interval-in-seconds: 60
+management:
+  security:
+    enabled: false
+#zuul:
+#  routes:

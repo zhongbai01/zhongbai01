@@ -1,0 +1,17 @@
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+  instance:
+    lease-expiration-duration-in-seconds: 120
+    lease-renewal-interval-in-seconds: 60
+  #ssl:
+    #key-store: classpath:keystore.p12
+    #key-store-password: 123456qaz
+    #keyStoreType: PKCS12
+    #keyAlias: tomcat
+management:
+  security:
+    enabled: false
+sensitive-headers: Access-Control-Allow-Origin
+ignored-headers: Access-Control-Allow-Origin,H-APP-Id,Token,APPToken

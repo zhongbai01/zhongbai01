@@ -1,0 +1,15 @@
+server:
+  port: 3333
+spring:
+  application:
+    name: mecp-schedule
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@127.0.0.1:1111/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+
+
+    

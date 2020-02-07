@@ -1,0 +1,18 @@
+server: 
+  port: 1111
+  address: 127.0.0.1
+spring:
+  security:
+    user:
+      name: admin
+      password: admin   
+  profiles:
+    active: ${server.address}  
+eureka:
+  instance:
+    hostname: ${server.address}
+  client:
+    register-with-eureka: true #不将自己作为客户端注册
+    fetch-registry: false #不检索服务
+    serviceUrl:
+       defaultZone: http://eureka-server1:8761/eureka/,http://eureka-server2:8762/eureka/,http://eureka-server:1111/eureka/

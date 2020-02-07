@@ -1,0 +1,18 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@10.10.2.74:7101/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+server:
+  port: 7002
+spring:
+  application:
+    name: zuul-server
+  cloud:
+    config:
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: config-server

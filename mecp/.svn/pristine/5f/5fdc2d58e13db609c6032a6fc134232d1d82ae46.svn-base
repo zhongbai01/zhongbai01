@@ -1,0 +1,13 @@
+package com.mecp;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MecpApiApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(MecpApiApplication.class, args);
+	}
+
+}
